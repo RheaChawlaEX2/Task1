@@ -4,11 +4,12 @@ import { isQueryParam } from "./isQueryParam.js";
 import {populateUserData} from "./getUsers.js"
 
 let page = 2;
+let initialPage = 1;
 let addUserBtn = getElement("addUserBtn");
 
 //initial user
 const initialFetch = (function () {
-  let url = `${baseUrl}page=1&${urlExtension}`;
+  let url = `${baseUrl}page=${initialPage}&${urlExtension}`;
   populateUserData(url, page);
 })();
 

@@ -6,7 +6,6 @@ import { baseUrl, urlExtension } from "./baseUrl.js";
 import { getUserData } from "./dataFetch.js";
 
 var userArray = new Array();
-
 let userData = getElement("userData");
 
 export const populateUserData = function (url) {
