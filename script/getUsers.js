@@ -1,15 +1,16 @@
-import DataFetch from "./dataFetch.js";
+
 import { userTemplate } from "./userTemplate.js";
 import { sortUserByName } from "./sortData.js";
 import { getElement } from "./dom.js";
 import { baseUrl, urlExtension } from "./baseUrl.js";
+import { getUserData } from "./dataFetch.js";
 
 var userArray = new Array();
-let users = new DataFetch();
+
 let userData = getElement("userData");
 
 export const populateUserData = function (url) {
-    users.getUserData(url).then((data) => {
+    getUserData(url).then((data) => {
       userArray.push(data);
       let html = "";
   
